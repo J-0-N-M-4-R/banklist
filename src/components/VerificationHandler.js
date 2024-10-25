@@ -22,7 +22,7 @@ function ActionHandler() {
     } else {
       setMessage('Invalid or expired link.');
     }
-  }, []);
+  }, [handleAction]);
 
   const handleAction = (mode, actionCode) => {
     switch (mode) {

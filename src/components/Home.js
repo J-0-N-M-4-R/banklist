@@ -7,7 +7,9 @@ import './home.css';
 function Home() {
   const { currentUser } = useAuth();
   const navigate = useNavigate();
-  
+
+  console.log ('Home: Current User: ', currentUser);
+
   const handleLogout = () => {
     auth.signOut()
       .then(() => {
