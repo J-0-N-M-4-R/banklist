@@ -1,0 +1,28 @@
+.email-confirmation-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--background-color-dark);
+}
+
+.email-confirmation-box {
+  width: 300px;
+  text-align: center;
+}
+
+.email-image {
+  width: 150px;
+  height: 150px;
+}
+
+h2 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+p {
+  color: var(--text-color-light);
+  font-size: 16px;
+  line-height: 1.5;
+}

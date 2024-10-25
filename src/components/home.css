@@ -1,0 +1,28 @@
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #333;
+  position: relative;
+}
+
+h1 {
+  color: #fff;
+  font-size: 48px;
+}
+
+.logout-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.logout-btn:hover {
+  text-decoration: underline;
+}

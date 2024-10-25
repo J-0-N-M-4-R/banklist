@@ -1,0 +1,51 @@
+/* Modal overlay to cover the entire screen */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for the overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  color: white;
+}
+
+/* Modal container for content */
+.modal-container {
+  background-color: var(--background-color-light);
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  width: 400px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 1001;
+  position: relative;
+  border: 2px solid var(--background-color-outline);
+}
+
+/* Modal actions (buttons) */
+.modal-actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between; /* Space between buttons */
+  align-items: center;
+}
+
+/* Buttons inside the modal */
+.modal-actions button {
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  flex: 1;
+  margin: 0 10px; /* Add space between buttons */
+}
+
+.modal-actions button:hover {
+  background-color: var(--primary-color-light);
+}

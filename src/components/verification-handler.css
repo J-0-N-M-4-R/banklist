@@ -1,0 +1,80 @@
+.verification-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--background-color-dark);
+}
+
+.verification-box {
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+}
+
+.verification-logo {
+  width: 100px;
+  height: 100px;
+}
+
+h2 {
+  font-size: 1.5em !important;
+  color: #fff !important;
+  margin-bottom: 20px;
+}
+
+p {
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--primary-color-light);
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+}
+
+.custom-verification-link {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.custom-verification-link:hover {
+  color: var(--primary-color-light);
+  text-decoration: underline;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
