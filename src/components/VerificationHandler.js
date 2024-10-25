@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { getAuth, applyActionCode, verifyPasswordResetCode, confirmPasswordReset } from 'firebase/auth';
 import { useAuth } from '../contexts/AuthContext'; // Import the AuthContext
@@ -12,19 +12,7 @@ function ActionHandler() {
   const auth = getAuth();
   const { setEmailVerified } = useAuth(); // Pull in setEmailVerified from context
 
-  useEffect(() => {
-    const urlParams = new URLSearchParams(window.location.search);
-    const actionCode = urlParams.get('oobCode');
-    const mode = urlParams.get('mode');
-
-    if (actionCode && mode) {
-      handleAction(mode, actionCode);
-    } else {
-      setMessage('Invalid or expired link.');
-    }
-  }, [handleAction]);
-
-  const handleAction = (mode, actionCode) => {
+  const handleAction = useCallback((mode, actionCode) => {
     switch (mode) {
       case 'verifyEmail':
         applyActionCode(auth, actionCode)
@@ -55,7 +43,19 @@ function ActionHandler() {
         setMessage('Unknown action. Please contact support.');
         break;
     }
-  };
+  }, [auth, navigate, setEmailVerified]);
+
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const actionCode = urlParams.get('oobCode');
+    const mode = urlParams.get('mode');
+
+    if (actionCode && mode) {
+      handleAction(mode, actionCode);
+    } else {
+      setMessage('Invalid or expired link.');
+    }
+  }, [handleAction]);
 
   const handlePasswordReset = async (e) => {
     e.preventDefault();
