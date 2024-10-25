@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #333;
+  background-color: var(--background-color-dark);
   position: relative;
 }
 
@@ -12,17 +12,26 @@ h1 {
   font-size: 48px;
 }
 
-.logout-btn {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background: none;
-  border: none;
-  color: #fff;
+.text-link {
   cursor: pointer;
-  font-size: 18px;
+  color: var(--primary-color); /* Adjust color as needed */
+  text-decoration: none;
+  font-size: 1.2em; /* Adjust font size as needed */
+  position: fixed;
+  font-weight: 300;
 }
 
-.logout-btn:hover {
-  text-decoration: underline;
+.text-link:hover {
+  font-weight: 400;
+  color: var(--primary-color-light); /* Darker shade on hover */
+}
+
+.top-left {
+  top: 10px;
+  left: 10px;
+}
+
+.top-right {
+  top: 10px;
+  right: 10px;
 }

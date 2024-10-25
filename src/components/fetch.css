@@ -1,0 +1,49 @@
+.fetch-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: var(--background-color-dark);
+}
+
+.fetch-btn-wide {
+  width: 300px;
+  padding: 15px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.log-window {
+  width: 80%;
+  height: 200px;
+  background-color: #f1f1f1;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: var(--background-color-light);
+}
+
+.navigate-home-btn {
+  position: absolute; /* Position it relative to the nearest positioned ancestor */
+  top: 10px; /* Distance from the top */
+  left: 10px; /* Distance from the left */
+  background: none; /* No background */
+  border: none; /* Remove border */
+  color: var(--text-color-light); /* Text color */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  text-decoration: none; /* Underline for a link-like appearance */
+}
+
+.navigate-home-btn:hover {
+  text-decoration: none; /* Remove underline on hover for a clean look */
+  color: var(--primary-color);
+  background: none;
+}

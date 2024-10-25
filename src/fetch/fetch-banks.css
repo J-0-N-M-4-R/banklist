@@ -1,0 +1,10 @@
+.log-window {
+  width: 80%;
+  height: 200px;
+  background-color: #f1f1f1;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: var(--background-color-light);
+}

@@ -7,6 +7,7 @@ import Home from './components/Home';
 import VerificationHandler from './components/VerificationHandler';
 import EmailConfirmation from './components/EmailConfirmation';
 import PasswordReset from './components/PasswordReset';
+import Fetch from './components/Fetch';
 
 function App() {
   const { currentUser, emailVerified } = useAuth(); // Use global email verification status
@@ -49,6 +50,12 @@ function App() {
         <Route
           path="/home"
           element={isVerifiedUser ? <Home /> : <Navigate to="/login" />}
+        />
+
+        {/* Fetch route */}
+        <Route
+          path="/fetch"
+          element={isVerifiedUser ? <Fetch /> : <Navigate to="/login" />}
         />
 
         {/* Verification handler route */}

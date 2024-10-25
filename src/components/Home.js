@@ -8,7 +8,7 @@ function Home() {
   const { currentUser } = useAuth();
   const navigate = useNavigate();
 
-  console.log ('Home: Current User: ', currentUser);
+  console.log('Home: Current User: ', currentUser);
 
   const handleLogout = () => {
     auth.signOut()
@@ -23,10 +23,17 @@ function Home() {
 
   return (
     <div className="home-container">
-      <h1>Home</h1>
-      <button className="logout-btn" onClick={handleLogout}>
+      {/* Fetch link fixed in the top left */}
+      <span className="text-link top-left" onClick={() => navigate('/fetch')}>
+        Fetch
+      </span>
+
+      {/* Logout link fixed in the top right */}
+      <span className="text-link top-right" onClick={handleLogout}>
         Logout
-      </button>
+      </span>
+
+      {/* You can add other content here */}
     </div>
   );
 }
